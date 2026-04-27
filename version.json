@@ -1,0 +1,7 @@
+{
+  "version": "v1.2.0-beta.1",
+  "codename": "Aqua",
+  "stable": false,
+  "next_codename": "Banana",
+  "changelog_root": "https://swhn.github.io/NMC-tool-changelog/"
+}

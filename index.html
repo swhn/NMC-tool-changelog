@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WBLS Engineering — NMC Configuration Tools · Changelog</title>
+  <meta name="description" content="Release notes for WBLS Engineering NMC Configuration Tools — APC UPS &amp; PDU NMC serial automation." />
+  <meta name="theme-color" content="#D24040" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Mark <html> as JS-enabled BEFORE styles.css applies so reveal-on-scroll
+       only hides elements when JS is around to bring them back. Without JS,
+       everything renders fully visible. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <!-- ── animated background ─────────────────────────────── -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob--red" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob--blue" aria-hidden="true"></div>
+
+  <!-- ── header / hero ───────────────────────────────────── -->
+  <header class="hero">
+    <nav class="nav">
+      <a class="nav__brand" href="#top">
+        <span class="nav__brand-mark">WBLS</span>
+        <span class="nav__brand-sub">Engineering</span>
+      </a>
+      <div class="nav__links">
+        <a href="#releases">Releases</a>
+        <a href="https://github.com/swhn/NMC-tool-changelog" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </nav>
+
+    <div class="hero__content">
+      <div class="hero__pill">
+        <span class="hero__pill-dot"></span>
+        Latest <strong>v1.2.0-beta.1</strong> · codename <em>Aqua</em>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">NMC Configuration Tools</span>
+        <span class="hero__title-glow">for APC UPS &amp; PDU</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        A modern Windows tool for serial-console automation of APC NMC cards.
+        One-click reports, smart command fallback, and a clean UI built for field
+        technicians.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#releases">
+          See changelog
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+            <path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── release timeline ────────────────────────────────── -->
+  <main id="releases" class="releases">
+    <header class="releases__header reveal">
+      <span class="kicker">Changelog</span>
+      <h2>Release timeline</h2>
+      <p>
+        Each major release ships under a color codename. Hover any card for
+        the full notes.
+      </p>
+    </header>
+
+    <div class="release-grid">
+      <!-- ── v2 — Banana ───────────────────────────────── -->
+      <article class="release-card reveal" data-version="v2" style="--accent:#F5C657">
+        <div class="release-card__inner">
+          <header class="release-card__head">
+            <div class="codename">
+              <span class="codename__chip">v2</span>
+              <span class="codename__name">Banana</span>
+            </div>
+            <span class="status status--soon">Upcoming · stable</span>
+          </header>
+
+          <h3 class="release-card__title">A modern UI &amp; full PDU support</h3>
+          <p class="release-card__date">Targeted release · v2.0.0</p>
+
+          <ul class="feature-list">
+            <li><strong>Modern UI in Flet.</strong> Material 3 surfaces, responsive layout 880×620 → 4K, sticky bottom bar that respects the Windows taskbar.</li>
+            <li><strong>Polished launcher.</strong> Clearer device cards and a Switch Device button always one click away.</li>
+            <li><strong>Full UPS &amp; PDU support.</strong> APC Rack PDU command set with phase readings, bank/outlet status, environmental sensors.</li>
+            <li><strong>Smarter recovery.</strong> Extended alternate-command fallback table; faster BM&gt; bootloader handling on cold boots.</li>
+            <li><strong>Bug-report shortcut.</strong> Copy Diagnostics produces a self-contained blob safe to paste into a ticket.</li>
+            <li><strong>Codename system.</strong> Each major release ships under a color name (Aqua, Banana, Cobalt, …).</li>
+          </ul>
+
+          <footer class="release-card__foot">
+            <span class="badge badge--accent">Banana</span>
+            <a class="card-link" href="https://github.com/swhn/NMC-tool-changelog" target="_blank" rel="noopener">Track on GitHub →</a>
+          </footer>
+        </div>
+      </article>
+
+      <!-- ── v1 — Aqua ─────────────────────────────────── -->
+      <article class="release-card reveal" data-version="v1" style="--accent:#5BD3D9">
+        <div class="release-card__inner">
+          <header class="release-card__head">
+            <div class="codename">
+              <span class="codename__chip">v1</span>
+              <span class="codename__name">Aqua</span>
+            </div>
+            <span class="status status--shipped">Current · v1.2.0-beta.1</span>
+          </header>
+
+          <h3 class="release-card__title">The first stable foundation</h3>
+          <p class="release-card__date">v1.0 → v1.7-beta · WBLS rebrand</p>
+
+          <ul class="feature-list">
+            <li><strong>Modern Windows GUI</strong> for APC NMC serial configuration. No terminal required.</li>
+            <li><strong>Side-by-side CLI</strong> for headless / automation use.</li>
+            <li><strong>Generated Word reports</strong> with branded cover, profile-aware title, optional credentials block.</li>
+            <li><strong>Configuration helpers:</strong> TCP/IP, DNS, NTP, system identity, time sync, email recipients.</li>
+            <li><strong>Smart fallback:</strong> <code>detbat -all</code> → <code>battstat</code> when the firmware doesn't recognize the primary command.</li>
+            <li><strong>Bootloader recovery:</strong> drops into <code>BM&gt;</code> after reboot? Sends <code>boot</code> and waits patiently for the firmware.</li>
+            <li><strong>Manual override dialog</strong> when a command times out — send raw commands, copy diagnostics, then resume or abort.</li>
+            <li><strong>Persistent technician name</strong> &amp; Advanced Report selection (Email / DNS / NTP optional sections).</li>
+            <li><strong>Verbose logging</strong> with rotating file at <code>%APPDATA%/WBLS/nmc_tools/logs/</code>, password redaction, in-app Info / Debug toggle.</li>
+            <li><strong>Launcher screen</strong> picks UPS or PDU NMC up front; right command set follows automatically.</li>
+            <li><strong>Quality-of-life polish:</strong> COM port placeholder so Bluetooth virtual ports don't hang the connection, validated IP/subnet/gateway fields, native maximize/restore.</li>
+          </ul>
+
+          <footer class="release-card__foot">
+            <span class="badge badge--accent">Aqua</span>
+            <a class="card-link" href="https://github.com/swhn/NMC-tool-changelog/releases/tag/v1.0" target="_blank" rel="noopener">View release →</a>
+          </footer>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ── footer ─────────────────────────────────────────── -->
+  <footer class="site-foot">
+    <div class="site-foot__inner">
+      <div>
+        <span class="site-foot__brand">WBLS Engineering</span>
+        <span class="site-foot__sub">NMC Configuration Tools</span>
+      </div>
+      <div class="site-foot__meta">
+        <span>Developed by Sai</span>
+        <span>·</span>
+        <span>Built for APC NMC2 / NMC3</span>
+        <span>·</span>
+        <a href="https://github.com/swhn/NMC-tool-changelog" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
