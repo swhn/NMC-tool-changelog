@@ -24,7 +24,7 @@ docs/
 5. Save. GitHub builds the site at `https://<user>.github.io/<repo>/`.
 
 The `CHANGELOG_URL` constant in `nmc_tools/__about__.py` already points at
-`https://wbls-eng.github.io/nmc-tools/changelog/` — update both the constant
+`https://swhn.github.io/NMC-configure-tool-changelog` — update both the constant
 and `version.json` when the actual GitHub username / repo name is finalized.
 
 ## Updating release notes
